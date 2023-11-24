@@ -21,13 +21,17 @@ This README assumes some basic knowledge of JavaScript but aims to make the use 
 
 To get started first clone the repository. 
 
-if you choose to use the Modules individually you can simply import the Module
+If you choose to use the Modules individually you can simply import the Module
 
-```javascript import Module from './path/to/module.js';```
+```import Module from './path/to/module.js';```
 
 or you can import all from the index.js file
 
-```javascript import * as DRM from './index.js ';```
+```import * as DRM from './index.js ';```
+
+The syntax then would be 
+
+```DRM.Module(input);```
 
 ## Modules 
 
@@ -48,7 +52,7 @@ or you can import all from the index.js file
 
 This Module is used to check if a number is a palindrome and requires a numerical input. A palindrome is a number that reads the same forwards and backwards.
 
-```javascript console.log(Palindrome(inputNum)); // console output -> true/false ``` 
+```console.log(Palindrome(inputNum)); // console output -> true/false ``` 
 
 ### RotationChecker 
 
@@ -58,37 +62,37 @@ This Module is used to check if a number has rotational characteristics. It requ
 
   The first configuration is for the identification of Ambigrams. An Ambigram is a number that can be rotated 180 degrees and still be correctly read, often as a new number. A valid ambigram can only contain 0,1,6,8, and 9 in any order. The script.js file in this repo has an array 'validAmb' already defined to use in conjunction with AmbHelper within RotationChecker.
 
-  ```javascript console.log(RotationChecker(inputNum,validAmb,AmbHelper)); // console output -> true/false```
+  ```console.log(RotationChecker(inputNum,validAmb,AmbHelper)); // console output -> true/false```
 
   #### StrHelper 
 
   The second configuration is for the identification of Strobogrammatic numbers. Strobogrammatic numbers are a subset of Ambigrams whereby the number can be rotated 180 degrees but remains the same number. A valid Strobogrammatic number can only contain 0,1,6,8 and 9 in a balanced order. The script.js file in this repo has an array 'validStr' for use in conjunction with StrHelper within RotationChecker. 
 
-  ```javascript console.log(RotationChecker(inputNum,validStr,StrHelper)); // console output -> true/false```
+  ```console.log(RotationChecker(inputNum,validStr,StrHelper)); // console output -> true/false```
 
   #### PerHelper 
 
   This third and final configuration is for the identification of Perfect Print numbers. Perfect Print numbers are a subset of Strobogrammatic numbers whereby the number can be rotated 180 degrees and remain the same number, but additionally displays the same regardless of serif. A valid Perfect Print number can only contain 0,6,8, and 9 in a balanced order. The script.js file in this repo has an array 'validPer' to use in conjunction with PerHelper within RotationChecker. 
 
-  ```javascript console.log(RotationChecker(inputNum,validPer,PerHelper)); // console output -> true/false```
+  ```console.log(RotationChecker(inputNum,validPer,PerHelper)); // console output -> true/false```
 
 ### Has420 
 
 This Module is used to determine if the number contains the meme number 420. It only requires a numerical input. 
 
-```javascript console.log(Has420(inputNum)); // console output -> true/false ```
+```console.log(Has420(inputNum)); // console output -> true/false ```
 
 ### Has69
 
 This Module is used to determine if the number contains the meme number 69. It only requires a numerical input. 
 
-```javascript console.log(Has69(inputNum)); // console output -> true/false ```
+```console.log(Has69(inputNum)); // console output -> true/false ```
 
 ### IsPrime
 
 This Module is used to determine if the number is a prime number. It only requires a numerical input.
 
-```javascript console.log(IsPrime(inputNum)); // console output -> true/false```
+```console.log(IsPrime(inputNum)); // console output -> true/false```
 
 ### Sequential 
 
@@ -98,10 +102,10 @@ This Module is used to determine if the number is arranged in a sequential order
 
   This is ascending order 
 
-  ```javascript console.log(Sequential(inputNum,Add)); // console output -> true/false```
+  ```console.log(Sequential(inputNum,Add)); // console output -> true/false```
 
   #### Sub
 
   This is descending order
 
-  ```javascript console.log(Sequential(inputNum,Sub)); // console output -> true/false```
+  ```console.log(Sequential(inputNum,Sub)); // console output -> true/false```
