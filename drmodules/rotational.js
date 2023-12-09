@@ -14,6 +14,12 @@ function RotationChecker(num,arr,func) {
      for (let i = 0; i < div; i++) {
         result.push(func(left[i],right[i]));
      }
+     if (num.length % 2 !== 0 && func === 'PerHelper') {
+        if (num[div + 1] != 0 || num[div + 1] != 8) {
+           return false;
+        } 
+     }
+     
      const final = result.every(value => value);
      if (final) {
         return true;

@@ -108,4 +108,4 @@ This Module is used to determine if the number is arranged in a sequential order
 
   This is descending order
 
-  ```console.log(Sequential(inputNum,Sub)); // console output -> true/false```
+```console.log(Sequential(inputNum,Sub)); // console output -> true/false```
