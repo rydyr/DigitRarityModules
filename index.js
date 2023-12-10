@@ -9,6 +9,8 @@ import IsPrime from './drmodules/prime.js';
 import Sequential from './drmodules/sequential.js';
 import Add from './drmodules/add.js';
 import Sub from './drmodules/sub.js';
+import LeadingZeros from './drmodules/leadingzeros.js';
+import TrailingZeros from './drmodules/trailingzeros.js';
 
-export { Palindrome, RotationChecker, AmbHelper, StrHelper, PerHelper, Has420, Has69, IsPrime, Sequential, Add, Sub };
+export { Palindrome, RotationChecker, AmbHelper, StrHelper, PerHelper, Has420, Has69, IsPrime, Sequential, Add, Sub, LeadingZeros, TrailingZeros };
 
