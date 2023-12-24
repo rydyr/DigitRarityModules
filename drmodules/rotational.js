@@ -1,6 +1,6 @@
 // Rotational Checker 
 // *ambigram, strobogrammatic, perfect print * // 
-
+import * as DRM from '../index.js'
 
 function RotationChecker(num,arr,func) {
    const numArray = num.toString().split('').map(Number);
@@ -14,21 +14,28 @@ function RotationChecker(num,arr,func) {
      for (let i = 0; i < div; i++) {
         result.push(func(left[i],right[i]));
      }
-     if (num.length % 2 !== 0 && func === 'PerHelper') {
-        if (num[div + 1] != 0 || num[div + 1] != 8) {
-           return false;
-        } 
-     }
-     
      const final = result.every(value => value);
-     if (final) {
-        return true;
-     } else {
-        return false;
-     }
+if (num.length % 2 !== 0 && func == DRM.PerHelper) {
+   if (final && num[div] == 0 || final && num[div] == 8) {
+      return true;
    } else {
      return false;
    }
+ } else if(num.length % 2 !== 0 && func == DRM.StrHelper){
+    if (final && num[div] == 0 || final && num[div] == 1 || final && num[div] == 8) {
+       return true;
+    } else {
+      return false;
+    }
+ } else if(final){
+    return true;
+ } else {
+  return false;
+ }
+} else {
+     return false;
+}
+
 }
 
 export default RotationChecker

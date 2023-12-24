@@ -6,7 +6,7 @@ function IsPrime(num) {
     return false;
   }
   const result = [];
-  const limit = Math.sqrt(num);
+  const limit = Math.sqrt(num) + 1;
   for (let i = 3;i < limit;i += 2){
     if (num % i === 0) {
        result.push(false)
